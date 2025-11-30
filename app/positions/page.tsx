@@ -1,7 +1,10 @@
+import AuthGuard from "@/components/auth-guard";
 export default function Positions() {
   return (
     <>
-      <h1>Todos Page</h1>
+      <AuthGuard>
+        <h1>Position Page</h1>
+      </AuthGuard>
     </>
   );
 }
