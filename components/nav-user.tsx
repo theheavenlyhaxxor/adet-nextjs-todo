@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { IconDotsVertical, IconLogout } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 
@@ -26,7 +27,7 @@ export function NavUser({
     name: string;
     email: string;
     // avatar can be a URL string or an icon component
-    avatar?: string | React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    avatar?: string | React.ComponentType<any>;
   };
 }) {
   const { isMobile } = useSidebar();
@@ -34,7 +35,7 @@ export function NavUser({
 
   const IconComp =
     typeof user.avatar === "function"
-      ? (user.avatar as React.ComponentType<React.SVGProps<SVGSVGElement>>)
+      ? (user.avatar as React.ComponentType<any>)
       : null;
 
   function handleLogout() {
