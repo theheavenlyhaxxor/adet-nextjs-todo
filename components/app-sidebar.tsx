@@ -38,11 +38,6 @@ const data = {
       url: "/todos",
       icon: IconListDetails,
     },
-    {
-      title: "Positions",
-      url: "/positions",
-      icon: IconChartBar,
-    },
   ],
 };
 
